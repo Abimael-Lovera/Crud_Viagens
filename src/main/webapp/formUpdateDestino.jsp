@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,27 +46,30 @@
 		<div class="row">
 			<div class="col-md-7">
 				<hr>
-				<h3>Cadastro Destinos</h3>
+				<h3>Atualizar Destinos</h3>
 				<hr>
 
-				<form action="DestinosCreateAndFind" method="POST">
+				<form action="DestinosUpdate" method="POST">
+					<input value="${destino.id}" name="idDestinos" type="number"
+						style="visibility: hidden">
 					<div class="form-floating mb-3">
 						<input name="estado" maxlength="20" type="text"
-							class="form-control" id="floatingInput1"> <label>Estado</label>
+							class="form-control" id="floatingInput1"
+							value="${destino.estado}"> <label>Estado</label>
 					</div>
 					<div class="form-floating mb-3">
-						<input name="cidade" maxlength="20" type="text"
-							class="form-control"> <label>Cidade</label>
-					</div>					
+						<input value="${destino.cidade}" name="cidade" maxlength="20"
+							type="text" class="form-control"> <label>Cidade</label>
+					</div>
 					<div class="form-floating mb-3">
-						<input name="descricao" maxlength="500" type="text" class="form-control">
-						<label>Descrição</label>
+						<input value="${destino.descricao}" name="descricao"
+							maxlength="500" type="text" class="form-control"> <label>Descrição</label>
 					</div>
 
-					<button class="btn btn-primary" type="submit">Cadastrar
+					<button class="btn btn-success" type="submit">Atualizar
 						Destino</button>
 					<button class="btn btn-secondary" type="reset">Limpar
-						Formuário</button>
+						Formulário</button>
 				</form>
 			</div>
 		</div>
