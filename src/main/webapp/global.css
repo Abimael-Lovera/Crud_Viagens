@@ -1,0 +1,131 @@
+@charset "ISO-8859-1";
+
+:root {
+  --color-title: #181e4b;
+  --color-subtitle: #df6951;
+  --color-nav-footer: #212832;
+  --color-violet: #6246e5;
+  --color-bg: #fff1da;
+  --color-primary: #fff;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+ul {
+  padding-left: 0 !important;
+}
+i {
+  font-family: "Font Awesome 5 Free";
+  font: var(--fa-font-solid);
+}
+body {
+  font-family: "Poppins", sans-serif !important;
+  background-color: #fff1da;
+  margin: 75px auto auto auto;
+}
+.title {
+  font-family: "Volkhov", serif !important;
+  color: var(--color-title);
+  font-weight: 900;
+}
+.subtitle {
+  color: var(--color-subtitle);
+  font-weight: 700;
+}
+
+.bg-light {
+  background-color: #fff1da !important;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.nav_logo img {
+  width: 140px;
+}
+
+.nav_links {
+  color: var(--color-nav-footer) !important;
+}
+
+.nav_btn {
+  max-width: 140px;
+  text-align: center;
+  border: 1px solid #212832;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 1000px) {
+  .nav_btn {
+    max-width: 140px;
+    text-align: left;
+    border: none;
+    padding: none;
+  }
+}
+
+.footer {
+  width: 100%;
+  background: var(--color-title) !important;
+  padding: 100px auto;
+}
+
+.footer_container {
+  display: grid;
+  row-gap: 2em;
+  /* margin: 50px 100px 0; */
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.footer_content {
+  display: grid;
+  grid-auto-columns: 250px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2em;
+  /* margin: auto; */
+}
+
+.footer_title,
+.footer_subtitle {
+  color: var(--color-primary);
+}
+
+.footer_description,
+.footer_link,
+.footer_social,
+.footer__copy {
+  color: var(--color-primary);
+}
+
+.footer_social {
+  display: flex;
+  justify-content: start;
+  gap: 1em;
+  font-size: 1.5em;
+}
+
+.footer_rights {
+  display: grid;
+  row-gap: 0.8em;
+  place-content: center;
+  text-align: center;
+}
+.footer_social-media {
+  color: var(--color-primary);
+}
+
+.footer__terms-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer_link:hover,
+.footer_social-media:hover {
+  color: #fff;
+}
